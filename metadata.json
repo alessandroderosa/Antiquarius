@@ -1,0 +1,11 @@
+{
+  "name": "Antiquarius - Perito Esperto",
+  "description": "Valutatore esperto di libri antichi e cartoline d\u0027epoca con analisi IA e stime di mercato.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "Image Analysis",
+    "Market Appraisal"
+  ]
+}
