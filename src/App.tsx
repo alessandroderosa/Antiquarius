@@ -134,7 +134,9 @@ function LockScreen({ onUnlock }: { onUnlock: () => void }) {
               <KeyRound className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" size={18} />
               <input 
                 type="password"
-                autoFocus
+                name="access-token-field"
+                id="access-token-field"
+                autoComplete="new-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Inserire Codice di Accesso"
@@ -242,7 +244,8 @@ export default function App() {
         ],
         config: {
           systemInstruction: SYSTEM_PROMPT,
-          responseMimeType: "application/json"
+          responseMimeType: "application/json",
+          tools: [{ googleSearch: {} }]
         }
       });
 
